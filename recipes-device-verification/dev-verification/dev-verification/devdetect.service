@@ -1,0 +1,12 @@
+[Unit]
+Description=Device detection by bash
+
+[Service]
+Type=oneshot
+ExecStart=bash /usr/sbin/dev-verification/devdetect.sh
+RemainAfterExit=no
+RestartSec=5
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

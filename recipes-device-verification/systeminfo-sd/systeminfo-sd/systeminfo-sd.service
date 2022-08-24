@@ -1,0 +1,13 @@
+[Unit]
+Description=System Info SD
+After=devdetect.service
+Requires=devdetect.service
+
+[Service]
+ExecStart=bash /usr/sbin/systeminfo-sd/systeminfo-sd.sh
+RemainAfterExit=no
+RestartSec=5
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

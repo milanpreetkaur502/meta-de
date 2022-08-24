@@ -1,0 +1,10 @@
+[Unit]
+Description=Led status script
+#After=bash-devdetect.service
+#Requires=bash-devdetect.service
+
+[Service]
+ExecStart=bash /usr/sbin/led-verification/status-leds.sh
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,13 @@
+[Unit]
+Description=System Info RAM
+After=devdetect.service
+Requires=devdetect.service
+
+[Service]
+ExecStart=bash /usr/sbin/systeminfo-ram/systeminfo-ram.sh
+RemainAfterExit=no
+RestartSec=5
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
